@@ -194,6 +194,7 @@ h1{
   padding: 1rem 2rem;
   font-size: 2em;
   font-weight: bold;
+  text-transform: capitalize;
 }
 
 p {
