@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/* Image properties and properties for svg graphics */
 img,
 picture,
 video,
@@ -27,7 +28,42 @@ body {
   color: white;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  
+}
+
+/* CONTAINERS */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin: 1rem 2%;
+  max-width: 100%;
+  border: 3px solid green;
+}
+
+.flex-container img {
+  max-width: 95%;
+}
+
+.two-column  {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*  Resizer */
+@media screen and (max-width: 700px) {
+  .two-column, .row:after{
+    width: 100%;
+    float: none;
+    
+  }
 }
 
 /* Topnav */
@@ -47,6 +83,7 @@ nav {
 
 .logo {
   margin-right: auto;
+  align-self: flex-start;
 }
 
 /* Style the topnav */
@@ -85,6 +122,7 @@ nav {
   border-radius: 4px;
 }
 
+/* Resize Topnav */
 @media screen and (max-width: 700px){
  nav, .nav-links, .nav-button, .logo{   
     flex-direction: column;
@@ -93,48 +131,9 @@ nav {
     align-items: center;
     font-size: 90%;
     gap: 0rem;
-
- }
- .flex-container{
-  font-size: 70%;
-  }
+}
 }
 
-/* CONTAINERS */
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-  margin: 1rem 2%;
-  max-width: 100%;
-  border: 3px solid green;
-}
-
-.flex-container img {
-  max-width: 95%;
-}
-
-.two-column  {
-  float: left;
-  width: 50%;
-  padding: 10px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/*  Resizer */
-@media screen and (max-width: 1000px) {
-  .two-column {
-    width: 100%;
-  }
-}
-
-/* Image properties for svg graphics */
 
 /*Buttons*/
 .b1{
@@ -170,6 +169,7 @@ h1{
   text-align: inherit;
   padding: 1rem 2rem;
   font-size: 2em;
+  font-weight: bold;
 }
 
 p {
@@ -183,6 +183,3 @@ sub{
   padding: 1rem 2rem;
   font-size: 1em;
 }
-
-
-
