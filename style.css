@@ -12,12 +12,13 @@ body {
 
 /* Topnav */
 nav {
-  width: 100;
+  top: 0;
+  position: sticky;
   padding: 1rem 2%;
   background-color: #3F1097;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   margin-bottom: 2rem;
-
+  
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -53,7 +54,7 @@ nav {
   font-size: 24px;
   padding: 12px 24px;
   border: none;
-  border-radius: 10px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -66,9 +67,10 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  text-align: center;
   padding-bottom: 2rem ;
   max-width: 100%;
-  /*border: 3px solid green; */
+  border: 3px solid green;
 }
 
 .flex-container img {
@@ -115,6 +117,12 @@ nav {
   background-color: #7620a1;
 }
 
+/*TEXT STYLES */
+h1{
+  text-align: center;
+  padding: 0rem 1rem;
+}
+
 /*  Resizer */
 @media screen and (max-width: 1000px) {
   .flex-container, .navbar, .nav-links {   
@@ -125,3 +133,4 @@ nav {
     flex-direction: column;
   }
 }
+
