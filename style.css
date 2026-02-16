@@ -1,7 +1,7 @@
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  font: inherit;
 }
 
 /* Image properties and properties for svg graphics */
@@ -22,6 +22,19 @@ svg {
     fill: white;
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+header {
+    top: 0;
+    position: sticky;
+    margin-bottom: auto;
+}
+
 body {
   font-family: "Gotham";
   background:  #27053B;
@@ -36,9 +49,10 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  margin: 1rem 2%;
+  margin: 0rem 1% 3rem 1%;
   max-width: 100%;
-  border: 3px solid green;
+  /* Unbracket to see containers*/
+  /*border: 3px solid green;*/
 }
 
 .flex-container img {
@@ -48,13 +62,14 @@ body {
 .two-column  {
   float: left;
   width: 50%;
-  padding: 10px;
+  padding: 0px 1rem 0px 1rem;
 }
 
 .row:after {
   content: "";
   display: table;
   clear: both;
+
 }
 
 /*  Resizer */
@@ -68,8 +83,6 @@ body {
 
 /* Topnav */
 nav {
-  top: 0;
-  position: sticky;
   padding: 1rem 2%;
   background-color: #3F1097;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -117,23 +130,34 @@ nav {
   cursor: pointer;
 }
 
-.nav-links a:hover, .nav-button:hover, .logo:hover{
+.nav-links a:hover, .nav-button:hover{
   background-color: #5a9bac;
   border-radius: 4px;
+}
+
+.flex-list {
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+    gap: var(--_gap, 1rem);
+    flex-grow: 1;
+
+    .last {
+        margin-left: auto;
+    }
 }
 
 /* Resize Topnav */
 @media screen and (max-width: 700px){
  nav, .nav-links, .nav-button, .logo{   
     flex-direction: column;
-    margin: auto;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
+    margin: auto;
     font-size: 90%;
-    gap: 0rem;
+    gap: 1rem;
 }
 }
-
 
 /*Buttons*/
 .b1{
