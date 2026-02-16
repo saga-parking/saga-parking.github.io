@@ -13,6 +13,7 @@ svg {
     display: block;
     object-fit: contain;
     max-width: 100%;
+    color: white;
 }
 
 :root {
