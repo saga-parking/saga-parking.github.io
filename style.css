@@ -29,6 +29,20 @@ svg {
   width: 100%;
 }
 
+.image-container {
+  width: 90%;
+  height: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-50 {
+  width: 50%;
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 header {
     top: 0;
     position: sticky;
@@ -48,7 +62,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  text-align: center;
   margin: 0rem 1% 3rem 1%;
   max-width: 100%;
   /* Unbracket to see containers*/
@@ -147,6 +160,15 @@ nav {
     }
 }
 
+.flex-list[data-direction="column"] {
+    flex-direction: column;
+
+    .last {
+        margin-top: auto;
+    }
+}
+
+
 /* Resize Topnav */
 @media screen and (max-width: 700px){
  nav, .nav-links, .nav-button, .logo{   
@@ -190,7 +212,7 @@ nav {
 
 /*TEXT STYLES For Desktop*/
 h1{
-  text-align: inherit;
+  text-align: center;
   padding: 1rem 2rem;
   font-size: 2em;
   font-weight: bold;
@@ -203,8 +225,13 @@ p {
   font-size: 1.5em;
 }
 
+
 sub{
   text-align: inherit;
   padding: 1rem 2rem;
   font-size: 1em;
+}
+
+.center-text {
+  text-align: center;
 }
